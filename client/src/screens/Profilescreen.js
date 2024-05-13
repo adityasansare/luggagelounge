@@ -1,4 +1,3 @@
-import { Content } from 'antd/es/layout/layout';
 import React, { useState, useEffect } from 'react';
 import { Tabs, Tab } from 'react-bootstrap';
 import axios from 'axios';

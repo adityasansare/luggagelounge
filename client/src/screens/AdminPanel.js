@@ -2,7 +2,6 @@ import React, { useState, useCallback, useEffect } from 'react';
 // import { Tabs } from "antd";
 import axios from 'axios';
 import Loader from "../components/Loader";
-import Error from "../components/Error";
 import Swal from 'sweetalert2'
 import { Tabs, Tab } from 'react-bootstrap';
 
