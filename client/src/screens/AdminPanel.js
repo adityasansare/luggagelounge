@@ -56,7 +56,7 @@ export function Bookings() {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const data = (await axios.get("/api/bookings/getallbookings")).data;
+        const data = (await axios.get("https://luggagelounge-server.vercel.app/api/bookings/getallbookings")).data;
         setbookings(data);
         setloading(false);
       } catch (error) {
@@ -117,7 +117,7 @@ export function Rooms() {
   useEffect(() => {
     const fetchRooms = async () => {
       try {
-        const data = (await axios.get("/api/rooms/getalllockers")).data;
+        const data = (await axios.get("https://luggagelounge-server.vercel.app/api/rooms/getalllockers")).data;
         setrooms(data);
         setloading(false);
       } catch (error) {
@@ -178,7 +178,7 @@ export function Users() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const data = (await axios.get("/api/users/getallusers")).data;
+        const data = (await axios.get("https://luggagelounge-server.vercel.app/api/users/getallusers")).data;
         setusers(data);
         setloading(false);
       } catch (error) {
@@ -257,7 +257,7 @@ export function Addroom() {
 
     try {
       setloading(true);
-      const result = (await axios.post('/api/rooms/addlockers', newroom)).data
+      const result = (await axios.post('https://luggagelounge-server.vercel.app/api/rooms/addlockers', newroom)).data
       console.log(result)
       setloading(false);
       Swal.fire('Congrats', "Your New Room Added Successfully", 'Success').then(result => {

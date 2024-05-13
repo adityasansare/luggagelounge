@@ -60,7 +60,7 @@ export function MyBookings() {
         const fetchData = async () => {
             try {
                 setloading(true);
-                const response = await axios.post('/api/bookings/getbookingsbyuserid/', { userid: user._id });
+                const response = await axios.post('https://luggagelounge-server.vercel.app/api/bookings/getbookingsbyuserid/', { userid: user._id });
                 setbookings(response.data);
                 setloading(false);
             } catch (error) {
@@ -79,7 +79,7 @@ export function MyBookings() {
 
         try {
             setloading(true)
-            const result = (await axios.post("/api/bookings/cancelbooking", { bookingid, roomid })).data
+            const result = (await axios.post("https://luggagelounge-server.vercel.app/api/bookings/cancelbooking", { bookingid, roomid })).data
             // console.log(data)
             setloading(false)
             Swal.fire('Congrats', 'Your booking has been cancelled', 'success').then(result => {

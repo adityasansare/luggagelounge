@@ -34,7 +34,7 @@ function Bookingscreen() {
     async function fetchData() {
       try {
         setloading(true);
-        const data = (await axios.post(`/api/rooms/getlockerbyid/${roomid}`)).data;
+        const data = (await axios.post(`https://luggagelounge-server.vercel.app/api/rooms/getlockerbyid/${roomid}`)).data;
         setroom(data);
         setloading(false);
       } catch (error) {
@@ -72,7 +72,7 @@ function Bookingscreen() {
     };
 
     try {
-      const result = await axios.post('/api/bookings/bookroom', bookingDetails);
+      const result = await axios.post('https://luggagelounge-server.vercel.app/api/bookings/bookroom', bookingDetails);
 
       if (result.data.success) {
         // Booking was successful
