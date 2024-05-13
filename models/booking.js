@@ -1,5 +1,3 @@
-
-const { number } = require('joi');
 const mongoose = require('mongoose');
 
 const bookingSchema = mongoose.Schema({

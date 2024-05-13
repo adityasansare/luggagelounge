@@ -6,7 +6,6 @@ import Error from "../components/Error";
 
 import { ConfigProvider, DatePicker, Space } from "antd";
 import "antd/dist/antd";
-import { func } from "joi";
 import moment from "moment";
 
 import AOS from "aos";
