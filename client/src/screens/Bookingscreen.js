@@ -30,20 +30,21 @@ function Bookingscreen() {
   console.log(totalamount);
 
 
-  useState(async () => {
-
-    try {
-      setloading(true);
-      const data = (await axios.post(`https://luggage-lounge-server.vercel.app/api/rooms/getroombyid/${roomid}`)).data;
-      
-      setroom(data);
-      setloading(false);
-    } catch (error) {
-      seterror(true);
-      console.log(error);
-      setloading(false);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        setloading(true);
+        const data = (await axios.post(`https://luggagelounge-server.vercel.app/api/rooms/getlockerbyid/${roomid}`)).data;
+        setroom(data);
+        setloading(false);
+      } catch (error) {
+        seterror(true);
+        console.error(error);
+        setloading(false);
+      }
     }
-  }, []);
+    fetchData();
+  }, [roomid]);
 
   function onToken(token) {
     console.log(token);

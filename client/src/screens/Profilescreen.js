@@ -30,7 +30,7 @@ function Profilescreen() {
     return (
         <div className='blacky'>
             <div className='row justify-content-center mt-10'>
-                <Tabs defaultActiveKey={2} id="uncontrolled-tab-example" data-bs-theme="dark">
+                <Tabs defaultActiveKey={1} id="uncontrolled-tab-example" data-bs-theme="dark">
                     <Tab eventKey={1} className=''  title="Profile">
                         {/* <h1>My Profile</h1> */}
                         <br />
@@ -60,7 +60,7 @@ export function MyBookings() {
         const fetchData = async () => {
             try {
                 setloading(true);
-                const response = await axios.post('https://luggagelounge-server.vercel.app/api/bookings/getbookingsbyuserid/', { userid: user._id });
+                const response = await axios.post('https://luggage-lounge-server.vercel.app/api/bookings/getbookingsbyuserid/', { userid: user._id });
                 setbookings(response.data);
                 setloading(false);
             } catch (error) {
@@ -79,7 +79,7 @@ export function MyBookings() {
 
         try {
             setloading(true)
-            const result = (await axios.post("https://luggagelounge-server.vercel.app/api/bookings/cancelbooking", { bookingid, roomid })).data
+            const result = (await axios.post("https://luggage-lounge-server.vercel.app/api/bookings/cancelbooking", { bookingid, roomid })).data
             // console.log(data)
             setloading(false)
             Swal.fire('Congrats', 'Your booking has been cancelled', 'success').then(result => {
