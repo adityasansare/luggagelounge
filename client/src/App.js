@@ -10,6 +10,7 @@ import Profilescreen from './screens/Profilescreen';
 import AdminPanel from './screens/AdminPanel';
 import Landinscreen from './screens/Landinscreen';
 // import Adminscreen from './screens/AdminScreen';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
