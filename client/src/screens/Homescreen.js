@@ -136,7 +136,7 @@ function Homescreen() {
   return (
     <div className="container">
       <div className="row mt-5">
-        <div className="col-md-3  ">
+        <div className="col-md-3 mb-3 mb-md-0 ">
           <ConfigProvider theme={{
             token: {
               // Seed Token

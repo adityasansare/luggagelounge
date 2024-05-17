@@ -20,7 +20,7 @@ AOS.init({
 
         return (
             <div className="row landing">
-                <div className="col-md-12 text-center">
+                <div className="col-md-12 text-center d-flex flex-column align-items-center justify-content-center">
 
                     <p data-aos='zoom-in' style={{ fontSize: '75px' }}>Luggage Lounge</p>
                     <h1 data-aos='zoom-out'>"Empty your Load and Hit the Road !!!"</h1><br></br>
